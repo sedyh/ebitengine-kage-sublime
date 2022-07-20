@@ -1,0 +1,229 @@
+{
+	"scope": "source.kage",
+	"completions": [
+		{
+			"trigger": "fragment", 
+			"contents": "package main\n\nfunc Fragment(pos vec4, tex vec2, col vec4) vec4 {\n\t$0\n\treturn vec4(0.5, 0.0, 0.0, 1.0)\n}"
+		},
+		{
+			"trigger": "vec2",
+			"contents": "vec2(0, 0)",
+			"details": "Usage vec2(x, y) or vec2(x)"
+		},
+		{
+			"trigger": "vec3",
+			"contents": "vec3(0, 0, 0)",
+			"details": "Usage vec3(x, y, z) or vec3(x)"
+		},
+		{
+			"trigger": "vec4",
+			"contents": "vec4(0, 0, 0, 0)",
+			"details": "Usage vec4(x, y, z, w) or vec4(x)"
+		},
+		{
+			"trigger": "mat2",
+			"contents": "mat2(\n\t0, 0,\n\t0, 0,\n)",
+			"details": "Usage mat2(a, b, c, d)"
+		},
+		{
+			"trigger": "mat3",
+			"contents": "mat3(\n\t0, 0, 0,\n\t0, 0, 0,\n\t0, 0, 0,\n)",
+			"details": "Usage mat3(a, b, c, d, e, f, g, h, i)"
+		},
+		{
+			"trigger": "mat4",
+			"contents": "mat4(\n\t0, 0, 0, 0,\n\t0, 0, 0, 0,\n\t0, 0, 0, 0,\n\t0, 0, 0, 0,\n)",
+			"details": "Usage mat4(a, b, c, d, e, f, g, h, i, j, k, l)"
+		},
+		{
+			"trigger": "kage: sin",
+			"contents": "sin($0)",
+			"details": "Usage sin(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: cos",
+			"contents": "cos($0)",
+			"details": "Usage cos(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: tan",
+			"contents": "tan($0)",
+			"details": "Usage tan(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: asin",
+			"contents": "asin($0)",
+			"details": "Usage asin(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: acos",
+			"contents": "acos($0)",
+			"details": "Usage acos(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: atan",
+			"contents": "atan($0)",
+			"details": "Usage atan(y_over_x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: atan2",
+			"contents": "atan2($0)",
+			"details": "Usage atan2(x, y T), T is float or vec"
+		},
+		{
+			"trigger": "kage: pow",
+			"contents": "pow($0)",
+			"details": "Usage pow(x, y T), T is float or vec"
+		},
+		{
+			"trigger": "kage: exp",
+			"contents": "exp($0)",
+			"details": "Usage exp(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: log",
+			"contents": "log($0)",
+			"details": "Usage log(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: exp2",
+			"contents": "exp2($0)",
+			"details": "Usage exp2(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: log2",
+			"contents": "log2($0)",
+			"details": "Usage log2(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: sqrt",
+			"contents": "sqrt($0)",
+			"details": "Usage sqrt(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: inversesqrt",
+			"contents": "inversesqrt($0)",
+			"details": "Usage inversesqrt(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: abs",
+			"contents": "abs($0)",
+			"details": "Usage abs(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: sign",
+			"contents": "sign($0)",
+			"details": "Usage sign(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: floor",
+			"contents": "floor($0)",
+			"details": "Usage floor(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: ceil",
+			"contents": "ceil($0)",
+			"details": "Usage ceil(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: fract",
+			"contents": "fract($0)",
+			"details": "Usage fract(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: mod",
+			"contents": "mod($0)",
+			"details": "Usage mod(x, y T), T is float or vec"
+		},
+		{
+			"trigger": "kage: min",
+			"contents": "min($0)",
+			"details": "Usage min(x, y T), T is float or vec"
+		},
+		{
+			"trigger": "kage: max",
+			"contents": "max($0)",
+			"details": "Usage max(x, y T), T is float or vec"
+		},
+		{
+			"trigger": "kage: clamp",
+			"contents": "clamp($0)",
+			"details": "Usage clap(x, min, max T), T is float or vec"
+		},
+		{
+			"trigger": "kage: mix",
+			"contents": "mix($0)",
+			"details": "Usage mix(x, y, a T), T is float or vec"
+		},
+		{
+			"trigger": "kage: step",
+			"contents": "step($0)",
+			"details": "Usage step(edge, x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: smoothstep",
+			"contents": "smoothstep($0)",
+			"details": "Usage smoothstep(edge0, edge1, x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: length",
+			"contents": "length($0)",
+			"details": "Usage length(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: distance",
+			"contents": "distance($0)",
+			"details": "Usage distance(p0, p1 T), T is float or vec"
+		},
+		{
+			"trigger": "kage: dot",
+			"contents": "dot($0)",
+			"details": "Usage dot(x, y T), T is float or vec"
+		},
+		{
+			"trigger": "kage: cross",
+			"contents": "cross($0)",
+			"details": "Usage cross(x, y vec3)"
+		},
+		{
+			"trigger": "kage: normalize",
+			"contents": "normalize($0)",
+			"details": "Usage normalize(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: faceforward",
+			"contents": "faceforward($0)",
+			"details": "Usage faceforward(n, i, nref T), T is float or vec"
+		},
+		{
+			"trigger": "kage: reflect",
+			"contents": "reflect($0)",
+			"details": "Usage reflect(i, n T), T is float or vec"
+		},
+		{
+			"trigger": "kage: refract",
+			"contents": "refract($0)",
+			"details": "Usage refract(i, n T, eta float), T is float or vec"
+		},
+		{
+			"trigger": "kage: transpose",
+			"contents": "transpose($0)",
+			"details": "Usage transpose(x T), T is mat"
+		},
+		{
+			"trigger": "kage: dfdx",
+			"contents": "dfdx($0)",
+			"details": "Usage dfdx(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: dfdy",
+			"contents": "dfdy($0)",
+			"details": "Usage dfdy(x T), T is float or vec"
+		},
+		{
+			"trigger": "kage: fwidth",
+			"contents": "fwidth($0)",
+			"details": "Usage fwidth(x T), T is float or vec"
+		}
+	],
+}

@@ -1,0 +1,67 @@
+%YAML 1.2
+---
+file_extensions:
+  - kage
+scope: source.kage
+
+contexts:
+  main:
+    - include: keywords
+    - include: types
+    - include: builtins
+    - include: functions
+    - include: numbers
+    - include: comments
+
+  keywords:
+    - match: '\b(package|var|func|if|else|for|return|true|false|nil)\b'
+      scope: keyword.control.kage
+
+  types:
+    - match: '\b(bool|int|float|vec2|vec3|vec4|mat2|mat3|mat4)\b'
+      scope: constant.language.kage
+
+  builtins:
+    - match: '\b(sin|cos|tan|asin|acos|atan|atan2|pow|exp|log|exp2|log2|sqrt|inversesqrt|abs|sign|floor|ceil|fract|mod|min|max|clamp|mix|step|smoothstep|length|distance|dot|bcross|normalize|faceforward|reflect|refract|transpose|dfdx|dfdy|fwidth)\b'
+      scope: entity.name.tag.kage
+
+  functions:
+    - match: '(?<=func )([a-zA-Z][a-zA-Z0-9]+)(?=\()'
+      scope: entity.name.function.kage
+    - match: '[a-zA-Z][a-zA-Z0-9]+(?=\(.*\))'
+      scope: support.function.kage
+
+  numbers:
+    - match: '(((\.\d+|0[xXbBoO][\dbBxXaAbBcCdDeEfF_]*|(?<=[^\w])\d+)\.{0,1}[\dbBxXaAbBcCdDeEfF_]*([eEpP][-+]{0,1}\d+))|((\.\d+|0[xXbBoO][\dbBxXaAbBcCdDeEfF_]*|(?<=[^\w])\d+)\.{0,1}[\dbBxXaAbBcCdDeEfF_]*))i{0,1}'
+      scope: constant.numeric.kage
+
+  comments:
+    - match: ^/\* =(\s*.*?)\s*= \*/$\n?
+      scope: comment.block.kage
+      captures:
+        1: meta.toc-list.banner.block.kage
+    - match: /\*
+      scope: punctuation.definition.comment.kage
+      push:
+        - meta_scope: comment.block.kage
+        - match: \*/
+          scope: punctuation.definition.comment.kage
+          pop: true
+        - match: ^\s*(\*)(?!/)
+          captures:
+            1: punctuation.definition.comment.kage
+    - match: \*/(?!\*)
+      scope: invalid.illegal.stray-comment-end.kage
+    - match: ^// =(\s*.*?)\s*=\s*$\n?
+      scope: comment.line.banner.kage
+      captures:
+        1: meta.toc-list.banner.line.kage
+    - match: //
+      scope: punctuation.definition.comment.kage
+      push:
+        - meta_scope: comment.line.double-slash.kage
+        - match: '(\\)$\n'
+          captures:
+            1: punctuation.separator.continuation.kage
+        - match: \n
+          pop: true
