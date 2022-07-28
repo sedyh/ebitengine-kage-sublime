@@ -8,7 +8,7 @@ Ebitengine adopts an original shading language 'Kage'. This has a compatible syn
 
 ### Installation
 
-[![](https://img.shields.io/badge/get%20it%20from-555555?style=for-the-badge&logo=sublimetext&logoColor=ba9759)![](https://img.shields.io/badge/package%20control-ba9759?style=for-the-badge)](https://packagecontrol.io/packages/Ebitengine Kage)
+[![](https://img.shields.io/badge/get%20it%20from-555555?style=for-the-badge&logo=sublimetext&logoColor=ba9759)![](https://img.shields.io/badge/package%20control-ba9759?style=for-the-badge)](https://packagecontrol.io/packages/Ebitengine%20Kage)
 
 <details><summary>Manual installation</summary><br>
   
